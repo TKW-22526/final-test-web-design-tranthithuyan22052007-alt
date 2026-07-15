@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h2>${product.name}</h2>
                     <p class="detail-price">${product.price}</p>
                     <p>Dòng nước hoa nữ cao cấp mang phong cách thượng lưu Pháp. Sự hòa quyện hương hoa lôi cuốn giúp phái đẹp luôn tỏa sáng tự tin và kiêu sa.</p>
-                    <button class="btn-buy" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Mua Ngay</button>
+                    <button class="btn-buy" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button>
                 </div>
             `;
         } else {
