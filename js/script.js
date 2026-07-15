@@ -1,7 +1,7 @@
-function xemChiTiet(id, name, brand, price, img) {
-    const product = { id, name, brand, price, img };
-    localStorage.setItem('selectedProduct', JSON.stringify(product));
-    window.location.href = 'html/chi-tiet.html'; 
+function xemChiTiet(id, name, brand, price, img,description) {
+    const product = { id, name, brand, price, img,description };
+    localStorage.setItem("selectedProduct", JSON.stringify(product));
+    window.location.href = "html/chi-tiet.html"; 
 }
 
 
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="brand">${product.brand}</span>
                     <h2>${product.name}</h2>
                     <p class="detail-price">${product.price}</p>
-                    <p>Dòng nước hoa nữ cao cấp mang phong cách thượng lưu Pháp. Sự hòa quyện hương hoa lôi cuốn giúp phái đẹp luôn tỏa sáng tự tin và kiêu sa.</p>
+                    <p>${product.description}</p>
                     <button class="btn-buy" onclick="alert('Đã thêm sản phẩm vào giỏ hàng!')">Thêm vào giỏ hàng</button>
                 </div>
             `;
