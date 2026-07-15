@@ -1,11 +1,10 @@
-// Chuyển hướng sang trang chi tiết nằm trong thư mục html/
 function xemChiTiet(id, name, brand, price, img) {
     const product = { id, name, brand, price, img };
     localStorage.setItem('selectedProduct', JSON.stringify(product));
-    window.location.href = 'html/chitiet.html'; 
+    window.location.href = 'html/chi-tiet.html'; 
 }
 
-// Đọc dữ liệu cục bộ đổ vào trang chi tiết
+
 document.addEventListener('DOMContentLoaded', () => {
     const detailContainer = document.getElementById('product-detail-data');
     if (detailContainer) {
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const product = JSON.parse(productData);
             detailContainer.innerHTML = `
                 <div class="detail-img">
-                    <img src="${product.img}" alt="${product.name}">
+                    <img src="../${product.img}" alt="${product.name}">
                 </div>
                 <div class="detail-content">
                     <span class="brand">${product.brand}</span>
